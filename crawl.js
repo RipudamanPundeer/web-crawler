@@ -51,17 +51,19 @@ function getURLsFromHTML(html,baseURL){
                 const urlObj = new URL(`${baseURL}${link.href}`)
                 urls.push(`${baseURL}${link.href}`)
             }
-            catch{
-                console.log(`error with relative url: ${link.href}`)
+            catch(err){
+                console.log(link.href)
+                console.log(`error with relative url: ${err.message}`)
             }
         }
         else{
             try{
                 const urlObj = new URL(link.href)
-                urls.push(link.href)
+                urls.push(urlObj.href)
             }
-            catch{
-                console.log(`error with absolute url: ${link.href}`)
+            catch(err){
+                console.log(link.href)
+                console.log(`error with absolute url: ${err.message}`)
             }
         }
         
