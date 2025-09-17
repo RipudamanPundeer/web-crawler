@@ -53,5 +53,4 @@ https://webscraper.io/test-sites/e-commerce/allinone/computers: 2 pages
 === End Report ===
 ```
 
-## License
-MIT
+
